@@ -12,5 +12,14 @@
 * ポリモフィズム
 * 
 
+### 継承
+* 説明しなくてもわかると思うので省略します。
+* 作る際に意識してることは、別のプログラムでそのスーパークラスに修正がなくても再利用できるように、実際使ってる側で密接に絡まないように作ること
+* 
+
+### ポリモフィズム
+* このページがすごいわかりやすい
+* http://www.nulab.co.jp/designPatterns/designPatterns1/designPatterns1-4.html
+
 # 参考
 * http://www.nulab.co.jp/designPatterns/designPatterns1/designPatterns1-1.html
