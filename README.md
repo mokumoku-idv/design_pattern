@@ -21,6 +21,16 @@
 * このページがすごいわかりやすい
 * http://www.nulab.co.jp/designPatterns/designPatterns1/designPatterns1-4.html
 * Interfaceを使うパターンとabstructを使うパターンの２つがある
+* 
+
+## AbstructとInterfaceの使い分け
+どちらも似たような効果があり、どちらを使うか迷う
+
+### Abstructの使いどころ
+共通的な実装があり、サブクラスで変更したい部分のみを抽出して抽象メソッドにした場合、抽象クラスを使う
+
+### Interfaceの使いどころ
+クラス間の共通の振る舞いを定義したい場合、インタフェースを使う
 
 # 参考
 * http://www.nulab.co.jp/designPatterns/designPatterns1/designPatterns1-1.html
