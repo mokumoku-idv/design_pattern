@@ -20,6 +20,7 @@
 ### ポリモフィズム
 * このページがすごいわかりやすい
 * http://www.nulab.co.jp/designPatterns/designPatterns1/designPatterns1-4.html
+* Interfaceを使うパターンとabstructを使うパターンの２つがある
 
 # 参考
 * http://www.nulab.co.jp/designPatterns/designPatterns1/designPatterns1-1.html
