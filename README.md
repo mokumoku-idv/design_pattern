@@ -32,69 +32,7 @@
 ### Interfaceの使いどころ
 クラス間の共通の振る舞いを定義したい場合、インタフェースを使う
 
-## シングルトンパターン
-インスタンスを生成するのってメモリ使うので、それをしないための、仕組み
-多分一番よく使われるのでは
-```
-リスト1　StaffListCache.java
-/**
-* CSVファイルからデータを読み取り、リストの作成を行い
-* キャッシュ処理を行うシングルトンクラスです。
-*/
-public class StaffListCache {
 
-	private static Log log =     LogFactory.getLog(StaffListCache.class);
-	private static StaffListCache instance = new StaffListCache();
-	private Map stafflistmap = new HashMap();
-	private StaffContext context = new StaffContext(
-				AnalysisStaffCompanyA.COMPANYCODE_A);
-
-	private StaffListCache() {
-	}
-
-	public static StaffListCache getInstance() {
-
-		// オブジェクトを生成するのは、初めの1回
-		if (instance == null) {
-			instance = new StaffListCache();
-		}
-
-		return instance;
-	}
-
-	public List getStaffList(String filename) {
-
-	  // ①キャッシュから取り出す
-	  List list = (List)stafflistmap.get(filename);
-②
-	if (list == null) {
-		list = new LinkedList();
-		FileReader freader;
-		try {
-			freader = new FileReader(filename + ".csv");
-			BufferedReader breader =
-					new BufferedReader(freader);
-
-			String line;
-			while((line = breader.readLine()) != null) {
-				// Staffオブジェクト生成
-				list.add(context.getStaff(line));
-			}
-			stafflistmap.put(filename, list); //キャッシュ
-			freader.close();
-			System.out.println("ファイルから取得");
-		} catch (IOException e) {
-			log.error(e.getMessage(), e);
-		}
-
-	  } else {
-		System.out.println("ファイルから取得");
-
-	  }
-	  return list;
-	}
-}
-```
 
 
 # 参考
